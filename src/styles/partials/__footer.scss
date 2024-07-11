@@ -1,4 +1,5 @@
 .pieDePagina{
     height: 40px;
-    background-color: red;
+    background-color: $colorDeFondo;
+    border-top: 3px solid $colorDetalles;
 }

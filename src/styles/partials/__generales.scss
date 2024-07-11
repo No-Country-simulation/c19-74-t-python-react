@@ -1,6 +1,17 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.subrayado{
+    text-decoration: underline;           
+}
+
+.titulo{
+    font-size: 26px;
 }

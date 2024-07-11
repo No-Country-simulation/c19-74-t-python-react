@@ -1,13 +1,10 @@
 //TABLET
 @media (max-width:768px) {
-    .cabecera {
-        background-color: red;
-    }
 }
 
 //MOBILE L
-@media (max-width:425px) {
+@media (max-width:522px) {
     .cabecera {
-        background-color: blue;
+        justify-content: center;
     }
 }

@@ -1,15 +1,28 @@
-.cabecera{
-    background-color: violet;
-    height: 40px;
-    border-bottom: 1px solid white;
+.cabecera {
+    background-color: $colorDeFondo;
+    height: 100%;
+    border-bottom: 3px solid $colorDetalles;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 
-    .cabecera__logo{
-
+    .cabecera__logo {
+        height: 50px;
+        padding: 3px;
+        margin: 0 25px;
     }
 
-    .cabecera__nav{
+    .cabecera__nav {
+        .nav__listado {
+            display: flex;
+            flex-direction: row;
+            margin: 0 30px;
 
+            .listado__items {
+                display: flex;
+                padding: 5px;
+            }
+        }
     }
 }
