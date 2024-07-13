@@ -6,7 +6,7 @@ export const Header = () => {
 
     return (
         <header className='cabecera'>
-            <Link to="/"><img className="cabecera__logo" src='./public/media/logo.png' alt="logo trabajo"/></Link>
+            <Link to="/"><img className="cabecera__logo" src='./public/media/logo__sf__letrasAzules.png' alt="logo trabajo"/></Link>
             <NavBar/>
         </header>
     )

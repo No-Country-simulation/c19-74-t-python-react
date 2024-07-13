@@ -8,10 +8,28 @@
     font-style: normal;
 }
 
-.subrayado{
-    text-decoration: underline;           
+.subrayado {
+    text-decoration: underline;
 }
 
-.titulo{
+.titulo {
+    font-family: "Roboto", sans-serif;
     font-size: 26px;
+}
+
+.pantallaDeCarga {
+    height: 100vh;
+    background: linear-gradient(180deg, #1A9891 55%, #BFFFFB 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pantallaDeCarga__logoBienvenida {
+        color: white;
+        width: 300px;
+
+        @media (max-width:372px) {
+            width: 150px;
+        }
+    }
 }

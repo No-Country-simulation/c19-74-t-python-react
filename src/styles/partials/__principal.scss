@@ -1,6 +1,6 @@
 .principal{
     min-height: 650px;
-    background-color: $colorDeFondo;
+    background-color: $colorDeBase;
     color: $colorDetalles;
     display: flex;
     align-items: start;
@@ -14,35 +14,38 @@
         align-items: center;
         flex-direction: column;
         margin-top: 50px;
-        border-radius: 15px;
-        border:2px solid $colorDetalles;
-
+        
         .contenedorLogin__logo{
-            width: 100%;
+            width: 259px;
             padding:0 10px;
         }
 
         .contenedorLogin__texto{
-            margin-top: 20px;
+            margin-top: 10px;
             padding: 10px;
             text-shadow: 1px 1px 10px white;
+            font-family: "Roboto", sans-serif;
+            size: 22px;
         }
 
         .contenedorLogin__input{
             width: 90%;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 100px;
             border:2px solid $colorDetalles;
-            background-color: $colorDeFondo;
+            text-align: left;
+            font-family: "Roboto", sans-serif;
         }
 
         .contenedorLogin__boton{
             padding: 10px;
-            margin: 40px 0 20px;
-            border-radius: 10px;
+            margin: 20px 0 20px;
+            border-radius: 100px;
             border:2px solid $colorDetallesOscuro;
             background-color: $colorDetalles;
             color: $colorDeBase;
+            width: 90%;
+            font-family: "Roboto", sans-serif;
         }
         
         .contenedorLogin__error{

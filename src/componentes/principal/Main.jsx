@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../context/CartContext';
+import { PantallaDeCarga } from '../PantallaDeCarga';
 
 export const Main = () => {
 
@@ -27,12 +28,12 @@ export const Main = () => {
     return (
         <div className='principal'>
             <div className='principal__contenedorLogin'>
-                <p className='contenedorLogin__texto subrayado titulo'>¡Hola!</p>
-                <img className='contenedorLogin__logo' src="./public/media/logo.png" />
-                <p className='contenedorLogin__texto'>Ingresá tu DNI</p>
-                <input className='contenedorLogin__input' type="text" name="textoSaludar" value={textoSaludar} onChange={imprimirSaludo} required></input>
+                <img className='contenedorLogin__logo' src="./public/media/logo__sf__letrasAzules.png" />
+                <p className='contenedorLogin__texto titulo'>¡Hola!</p>
+                <p className='contenedorLogin__texto'>Accede por primera vez con tus datos</p>
+                <input placeholder='DNI' className='contenedorLogin__input' type="text" name="textoSaludar" value={textoSaludar} onChange={imprimirSaludo} required></input>
                 {error && <p className='contenedorLogin__error'>{error}</p>}
-                <button className='contenedorLogin__boton' onClick={campoVacio}>Ingresar</button>
+                <button className='contenedorLogin__boton' onClick={campoVacio}>Siguiente</button>
             </div>
         </div>
     )
