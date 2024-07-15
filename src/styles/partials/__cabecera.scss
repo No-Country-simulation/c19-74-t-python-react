@@ -1,27 +1,29 @@
 .cabecera {
-    background-color: $colorDeBase;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  background-color: $colorDeBase;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 
-    .cabecera__logo {
-        height: 50px;
-        padding: 3px;
-        margin: 0 25px;
+  .cabecera__logo {
+    height: 50px;
+    padding: 3px;
+    margin: 0 25px;
+  }
+
+  .cabecera__nav {
+    .nav__listado {
+      display: flex;
+      flex-direction: row;
+      margin: 0 30px;
+
+      .listado__items {
+        display: flex;
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+      }
     }
-
-    .cabecera__nav {
-        .nav__listado {
-            display: flex;
-            flex-direction: row;
-            margin: 0 30px;
-
-            .listado__items {
-                display: flex;
-                padding: 5px;
-            }
-        }
-    }
+  }
 }
