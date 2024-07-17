@@ -1,7 +1,6 @@
-import "./teachers.css";
 const Teachers = () => {
   return (
-    <main>
+    <main className="principal">
       <h2> informacion de los profesores</h2>
     </main>
   );
