@@ -1,10 +1,11 @@
-const Home = () => {
-  return (
-    <main>
-      <h2>Welcome to the spider verse</h2>
-      <p>aca va contenido</p>
-    </main>
-  );
-};
+import React from 'react'
 
-export default Home;
+export const Home = () => {
+    return (
+        <img
+            className="direccion__home"
+            src="./public/media/logo__sf.png"
+            alt="Logo"
+        />
+    )
+}

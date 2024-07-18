@@ -3,9 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     text-align: center;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: bold;
-    font-style: normal;
+    font-family: "Roboto", sans-serif;
 }
 
 .subrayado {
@@ -13,7 +11,6 @@
 }
 
 .titulo {
-    font-family: "Roboto", sans-serif;
     font-size: 26px;
 }
 
@@ -32,4 +29,13 @@
             width: 150px;
         }
     }
+}
+
+.direccion__home{
+    margin-top: 40px;
+    width: 150px;
+}
+
+.visible{
+    display: flex !important;
 }

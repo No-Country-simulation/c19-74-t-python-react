@@ -7,7 +7,7 @@
     justify-content: start;
     flex-direction: column;
 
-    .principal__mensajeError{
+    .principal__mensajeError {
         margin-top: 30px;
         padding: 10px;
         text-decoration: none;
@@ -15,18 +15,85 @@
 
     .principal__persona {
         background-color: $colorDetallesOscuro;
-        min-height: 100vh;
+        height: 650px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        .persona__ficha {
+        .persona__desplegable {
+            width: 70%;
+            background-color: $colorDesplegables;
+            padding: 5px;
+            margin: 10px 0;
             display: flex;
-            flex-direction: column;
-            padding: 20px;
-            color: white;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 6px;
+            align-items: center;
 
-            .ficha__datos {
+            .desplegable__curso {
+                color: white;
+                margin-left: 10px;
+            }
+
+            .desplegable__flecha {
+                height: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        .persona__calificaciones {
+            width: 70%;
+
+            .calificaciones__texto {
+                color: white;
+                padding: 20px 0 5px 0;
                 text-align: left;
+                font-weight: bold;
+            }
+
+            .calificaciones__desplegable {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $colorDesplegables;
                 padding: 5px;
+                margin: 10px;
+                border-radius: 6px;
+                
+
+                .desplegable__flecha {
+                    height: 10px;
+                    margin-right: 10px;
+                }
+
+                .desplegable__materia {
+                    color: white;
+                }
+            }
+        }
+
+        .persona__datos {
+            color: white;
+            display: none;
+            flex-direction: row;
+            width: 70%;
+            align-items: center;
+
+            .datos__imagenAlumno {
+                height: 40px;
+            }
+
+            .datos__contenedorAlumno {
+                padding: 0 10px;
+                display: flex;
+                flex-direction: column;
+
+                .contenedorAlumno__nombre {
+                    text-align: left;
+                }
             }
         }
     }
@@ -41,7 +108,7 @@
         margin-top: 50px;
 
         .contenedorLogin__logo {
-            width: 259px;
+            width: 250px;
             padding: 0 10px;
         }
 
@@ -49,7 +116,6 @@
             margin-top: 10px;
             padding: 10px;
             text-shadow: 1px 1px 10px white;
-            font-family: "Roboto", sans-serif;
             size: 22px;
         }
 
@@ -61,7 +127,6 @@
                 border-radius: 100px;
                 border: 2px solid $colorDetalles;
                 text-align: left;
-                font-family: "Roboto", sans-serif;
             }
 
             .contenedorLogin__boton {
@@ -72,7 +137,6 @@
                 background-color: $colorDetalles;
                 color: $colorDeBase;
                 width: 90%;
-                font-family: "Roboto", sans-serif;
             }
 
             .contenedorLogin__error {

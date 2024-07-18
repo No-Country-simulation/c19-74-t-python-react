@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Login = () => {
 
@@ -24,11 +24,12 @@ export const Login = () => {
   return (
     <div className="principal">
       <div className="principal__contenedorLogin">
-        <img
+      <Link to="/"><img
           className="contenedorLogin__logo"
           src="./public/media/logo__sf__letrasAzules.png"
           alt="Logo"
         />
+        </Link>
         <p className="contenedorLogin__texto titulo">¡Hola!</p>
         <p className="contenedorLogin__texto">
           Accede por primera vez con tus datos

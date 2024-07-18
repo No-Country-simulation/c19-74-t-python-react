@@ -1,5 +1,4 @@
 import React from "react";
-import { NavBar } from "./NavBar";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
@@ -12,7 +11,6 @@ export const Header = () => {
           alt="logo trabajo"
         />
       </Link>
-      <NavBar />
     </header>
   );
 };
