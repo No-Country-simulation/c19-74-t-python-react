@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Header } from "./componentes/cabecera/Header";
 import { Footer } from "./componentes/footer/Footer";
 import { CartProvider } from "./context/CartContext";
@@ -8,8 +8,10 @@ import Parents from "./componentes/views/Parents";
 import Teachers from "./componentes/views/Teachers";
 import { Login } from "./componentes/principal/Login";
 import { NotFound } from "./componentes/NotFound";
+import NavBar from "./componentes/nav/NavBar";
 
 function App() {
+  const location = useLocation();
   return (
     <>
       <Header />
@@ -21,8 +23,8 @@ function App() {
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
-
-      <Footer />
+      {location.pathname !== "/" && <NavBar />}
+      {/* <Footer /> */}
     </>
   );
 }
