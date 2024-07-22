@@ -11,19 +11,19 @@ import { NotFound } from "./componentes/NotFound";
 
 function App() {
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/students" element={<Students />} />
-          <Route path="/parents" element={<Parents />} />
-          <Route path="/teachers" element={<Teachers />} />
-          <Route path='/*' element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </CartProvider>
+    <>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/students" element={<Students />} />
+        <Route path="/parents" element={<Parents />} />
+        <Route path="/teachers" element={<Teachers />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+
+      <Footer />
+    </>
   );
 }
 
