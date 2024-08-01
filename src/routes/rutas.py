@@ -38,17 +38,65 @@ def inicio_sesion():
     padre =db.fn_get_padre(correo,contraseña)
     maestro =db.fn_get_maestro(correo,contraseña)
     if estudiante:
-        notas = db.mostrar_notas_estudiante(correo)
-        notas.append({"rol": "estudiante"})
-        return notas
+            notas = db.mostrar_notas_estudiante(correo)
+            i = 0
+            data = {"rol":"estudiante","nombre":estudiante[0],"seccion":estudiante[1],"materias":[]}
+            for nota in notas:
+                data["materias"].append({})
+                data["materias"][i]["maestro"] = nota[2]
+                data["materias"][i]["materia"] = nota[3]
+                data["materias"][i]["nota"] = nota[4]
+                data["materias"][i]["feedback"] = nota[5]
+                i+=1
+            return data
+    
     elif padre:
         notas = db.mostrar_notas_estudiante(correo)
-        notas.append({"rol": "padre"})
-        return notas
+        i = 0
+        data = {"rol":"padre","hijos":[]}
+        valor = []
+        for estudiante in notas:
+            if estudiante[0] not in valor:
+                data["hijos"].insert(i,{"nombre":estudiante[0],"seccion":estudiante [1],"materias":[]})
+                data["hijos"][i]["materias"].append({})
+                data["hijos"][i]["materias"][0]["maestro"] = estudiante[2]
+                data["hijos"][i]["materias"][0]["materia"] = estudiante[3]
+                data["hijos"][i]["materias"][0]["nota"] = estudiante[4]
+                data["hijos"][i]["materias"][0]["feedback"] = estudiante[5]
+
+                valor.append(estudiante[0])
+                i+=1
+            else:
+                index = valor.index(estudiante[0])
+                data["hijos"][index]["materias"].append({})
+                data["hijos"][index]["materias"][-1]["maestro"] = estudiante[2]
+                data["hijos"][index]["materias"][-1]["materia"] = estudiante[3]
+                data["hijos"][index]["materias"][-1]["nota"] = estudiante[4]
+                data["hijos"][index]["materias"][-1]["feedback"] = estudiante[5]
+    
+        return data
+
     elif maestro:
-        notas = db.mostrar_notas_maestro(correo)
-        notas.append({"rol": "maestro"})
-        return notas
+        i = 0
+        notas = db.mostrar_notas_maestro("mario@mario")
+        data = {"rol":"docente","grados":[]}
+        valor = []
+        for nota in notas:
+            if nota[3] not in valor:
+                data["grados"].append({})
+                data["grados"][i][nota[3]] = [{}]
+                data["grados"][i][nota[3]][0]["estudiantes"] = {"nombre":nota[0],"email":nota[1],"materia":nota[2],"nota":nota[4],"feedback":nota[5]}
+                valor.append(nota[3])
+                i+=1
+            
+            else:
+                index = valor.index(nota[3])
+                data["grados"].append({})
+                data["grados"][index][nota[3]] = [{}]
+                data["grados"][index][nota[3]][0]["estudiantes"] = {"nombre":nota[0],"email":nota[1],"materia":nota[2],"nota":nota[4],"feedback":nota[5]}          
+    
+        return data
+
     else:
         return {"error": "Credenciales incorrectas"}
     

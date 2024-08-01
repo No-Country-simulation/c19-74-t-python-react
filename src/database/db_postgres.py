@@ -18,7 +18,7 @@ def mostrar_notas_estudiante(estudiante) -> list|None:
     conn = connect_to_db()
     cursor = conn.cursor()
     cursor.execute(
-        'select estudiantes.nombre, maestros.nombre, materias.nombre, notas.nota, notas.feedback from "rendimiento escolar".notas left join "rendimiento escolar".estudiantes on notas.email_estudiante = estudiantes.email left join "rendimiento escolar".maestros on notas.email_maestro = maestros.email left join "rendimiento escolar".materias on notas.id_materia = materias.id_materia left join "rendimiento escolar".padres on estudiantes.id_padre = padres.id_padre where estudiantes.email = %s or padres.email = %s ',
+        'select estudiantes.nombre,estudiantes.grado, maestros.nombre, materias.nombre, notas.nota, notas.feedback from "rendimiento escolar".notas left join "rendimiento escolar".estudiantes on notas.email_estudiante = estudiantes.email left join "rendimiento escolar".maestros on notas.email_maestro = maestros.email left join "rendimiento escolar".materias on notas.id_materia = materias.id_materia left join "rendimiento escolar".padres on estudiantes.id_padre = padres.id_padre where estudiantes.email = %s or padres.email = %s ',
        
        (estudiante,estudiante,)
         )
@@ -33,7 +33,7 @@ def mostrar_notas_maestro(maestro) -> list|None:
     conn = connect_to_db()
     cursor = conn.cursor()
     cursor.execute(
-                'select estudiantes.nombre, materias.nombre, estudiantes.grado, notas.nota, notas.feedback from "rendimiento escolar".notas left join "rendimiento escolar".estudiantes on notas.email_estudiante = estudiantes.email left join "rendimiento escolar".maestros on notas.email_maestro = maestros.email left join "rendimiento escolar".materias on notas.id_materia = materias.id_materia where maestros.email = %s ',
+                'select estudiantes.nombre,estudiantes.email, materias.nombre, estudiantes.grado, notas.nota, notas.feedback from "rendimiento escolar".notas left join "rendimiento escolar".estudiantes on notas.email_estudiante = estudiantes.email left join "rendimiento escolar".maestros on notas.email_maestro = maestros.email left join "rendimiento escolar".materias on notas.id_materia = materias.id_materia where maestros.email = %s ',
 
                 (maestro,)
                 )
