@@ -1,0 +1,87 @@
+[
+  {
+    "rol": "padre",
+    "email": "antonio@gmail.com",
+    "password": "1234",
+    "hijos": [
+      {
+        "nombre": "Luis",
+        "seccion": "9a",
+        "materias": [
+          { "materia": "fisica", "nota": 12, "feedback": "feedback" },
+          { "materia": "matematicas", "nota": 13, "feedback": "estudiar mas" }
+        ]
+      },
+      {
+        "nombre": "Miguel",
+        "seccion": "9a",
+        "materias": [
+          { "materia": "matematicas", "nota": 15, "feedback": "cosas" }
+        ]
+      }
+    ]
+  },
+  {
+    "email": "agustin@gmail.com",
+    "password": "1234",
+    "materias": [
+      {
+        "feedback": "Ejemplos incompletos",
+        "maestro": "Miguel",
+        "materia": "Fisica",
+        "nota": 11,
+        "trimestres": [
+          { "trimestre": "1° trimestre", "notas": [8, 3, 2] },
+          {
+            "trimestre": "2° trimestre",
+            "notas": [5, 10, 10]
+          },
+          {
+            "trimestre": "3° trimestre",
+            "notas": [10, 10, 10]
+          }
+        ]
+      }
+    ],
+    "nombre": "Agustin",
+    "apellido": "alguno",
+    "rol": "estudiante",
+    "seccion": "9a",
+    "asistencia": "80%",
+    "mensajes": "1",
+    "mensaje": [{ "texto": "mensaje mensja" }]
+  },
+  {
+    "grados": [
+      {
+        "8A": [
+          {
+            "estudiantes": {
+              "email": "luis@luis",
+              "feedback": "Practicar ecuaciones",
+              "materia": "Matematicas",
+              "nombre": "Luis",
+              "nota": 12
+            }
+          }
+        ]
+      },
+      {
+        "9a": [
+          {
+            "estudiantes": {
+              "email": "juan@juan",
+              "feedback": "Buen trabajo",
+              "materia": "Matematicas",
+              "nombre": "Juan",
+              "nota": 16
+            }
+          }
+        ]
+      }
+    ],
+    "rol": "docente",
+    "email": "pedro@gmail.com",
+    "password": "1234"
+  }
+]

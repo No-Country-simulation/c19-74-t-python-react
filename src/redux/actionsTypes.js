@@ -1,0 +1,10 @@
+export const CATCH_INFO = "CATCH_INFO";
+export const GET_INFO = "GET_INFO";
+export const SEND_CALIFICACION = "SEND_CALIFICACION";
+export const SEND_MENSAGE = "SEND_MENSAGE";
+export const INFORME_PDF = "INFORME_PDF";
+export const ACCES = "ACCES";
+export const GET_ALUMNO = "GET_ALUMNO";
+export const GET_ALUMNOS = "GET_ALUMNOS";
+export const GET_MAESTROS = "GET_MAESTROS";
+export const GET_PADRES = "GET_PADRES";

@@ -1,0 +1,144 @@
+.perfil_estudiante {
+  background-color: $colorDetallesOscuro;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2rem;
+  align-items: center;
+}
+
+.cabecera_alumno {
+  width: 100%;
+  height: auto;
+}
+.nombre_alumno {
+  // border: thin solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // background: pink;
+}
+.alineacion {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.grado {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.contenedor_cajas {
+  // border: thin solid brown;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.caja_informativa {
+  width: 164.5px;
+  height: 136px;
+  border: thin solid #fff;
+  border-radius: 15px;
+  padding: 22px, 28px, 22px, 28px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.tamaño_img {
+  width: 20px;
+  height: 20px;
+}
+
+.container_calificaciones {
+  width: 100%;
+  height: auto;
+  // border: thin solid yellow;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.momentaneo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container_semestres {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  // border: thin solid pink;
+  padding: 10px 5px;
+}
+.contenedor_semestre {
+  width: 90%;
+  // border: thin solid purple;
+}
+.arcticle_semestre {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  // border: thin solid blue;
+}
+
+.ordenando_info_notas {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.caja_notas {
+  // border: thin solid yellow;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  // background: yellowgreen;
+  flex-wrap: wrap;
+}
+
+.mini_box {
+  width: 1.5rem;
+  height: auto;
+  border: thin solid #fff;
+  border-radius: 0.25rem;
+  margin: 0 0 0 4px;
+}
+
+.promedio_tri {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  // border: thin solid rgb(255, 21, 0);
+  gap: 2rem;
+}
+
+.estilo_cursor {
+  cursor: pointer;
+
+  text-align: start;
+  // border: thin solid red;
+}
+
+@media (width>768px) {
+  .contenedor_cajas {
+    justify-content: space-evenly;
+  }
+}

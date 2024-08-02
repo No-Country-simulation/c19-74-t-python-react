@@ -1,0 +1,52 @@
+[
+  {
+    "email": "mateoalvarez@gmail.com",
+    "password": "123456789",
+    "rol": "estudiante",
+    "nombre": "Mateo",
+    "apellido": "Alvarez Rapetti",
+    "asistencia": "92%",
+    "padre": {
+      "nombre": "Juan Carlos",
+      "apellido": "Alvarez",
+      "email": "juanc@gmail.com"
+    },
+    "grado": "1",
+    "seccion": "A",
+    "materias": [
+      {
+        "nombre": "matematica",
+        "profesor": "Rogelio",
+        "trimestres": [
+          {
+            "trimestre": "1° trimestre",
+            "notas": [10, 8, 6]
+          },
+          {
+            "trimestre": "2° trimestre",
+            "notas": [8, 5, 7]
+          },
+          {
+            "trimestre": "3° trimestre",
+            "notas": [10, 9, 8]
+          }
+        ]
+      },
+      {
+        "nombre": "literatura",
+        "profesor": "Ana",
+        "trimestres": [
+          { "trimestre": "1° trimestre", "notas": [8, 3, 2] },
+          {
+            "trimestre": "2° trimestre",
+            "notas": [5, 10, 10]
+          },
+          {
+            "trimestre": "3° trimestre",
+            "notas": [10, 10, 10]
+          }
+        ]
+      }
+    ]
+  }
+]

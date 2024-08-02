@@ -1,6 +1,30 @@
 $colorDeFondo: rgb(224, 224, 224);
-$colorDeBase: #F1EEEE;
-$colorDetalles: #1A9891;
-$colorDetallesOscuro:#1A9891;
+$colorDeBase: #f1eeee;
+$colorDetalles: #1a9891;
+$colorDetallesOscuro: #1a9891;
 $textoError: rgb(153, 27, 27);
-$colorDesplegables:#61C2BC;
+$colorDesplegables: #61c2bc;
+//* ------------------------------------------
+.letra_verde {
+  color: $colorDetallesOscuro;
+}
+.letra_negro {
+  color: #000;
+  font-size: 16px;
+}
+.fondo_blanco {
+  background-color: $colorDeBase;
+}
+.comentario {
+  height: 94px;
+}
+.bg_verde_claro {
+  background-color: #61c2bc;
+}
+.letra_blanca {
+  color: white;
+}
+
+.letra_verde_oscuro {
+  color: black;
+}
