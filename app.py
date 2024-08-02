@@ -8,5 +8,6 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 app.register_blueprint(rutas.main)
 
+
 if __name__ == "__main__":
     app.run(debug=True)

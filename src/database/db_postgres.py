@@ -73,3 +73,49 @@ def fn_subir_notas(estudiante,maestro,nota,feedback):
     cursor.execute('insert into "rendimiento escolar".notas (email_estudiante,email_maestro,nota,feedback,id_materia) values (%s,%s,%s,%s,(select id_materia  from "rendimiento escolar".materias where nombre in (select materia from "rendimiento escolar".maestros where email = %s) ))',(estudiante,maestro,nota,feedback,maestro))
     connection.commit()
     connection.close()
+
+def get_eventos():
+    connection = connect_to_db()
+    cursor = connection.cursor()
+    cursor.execute('select * from "rendimiento escolar".eventos')
+    user = cursor.fetchall()
+    connection.close()
+    return user
+
+def get_mensajes_recibidos(correo):
+    connection = connect_to_db()
+    cursor = connection.cursor()
+    cursor.execute('select * from "rendimiento escolar".mensajes where receptor =%s',(correo,))
+    user = cursor.fetchall()
+    connection.close()
+    return user
+
+def get_mensajes_enviados(correo):
+    connection = connect_to_db()
+    cursor = connection.cursor()
+    cursor.execute('select * from "rendimiento escolar".mensajes where remitente =%s',(correo,))
+    user = cursor.fetchall()
+    connection.close()
+    return user
+
+def enviar_mensaje(receptor,mensaje,remitente):
+    connection = connect_to_db()
+    cursor = connection.cursor()
+    cursor.execute('insert into "rendimiento escolar".mensajes (receptor,mensaje,remitente) values (%s,%s,%s)',(receptor,mensaje,remitente))
+    connection.commit()
+
+def mensaje_get_padres(correo):
+    connection = connect_to_db()
+    cursor = connection.cursor()
+    cursor.execute('select padres.email from "rendimiento escolar".padres left join "rendimiento escolar".estudiantes on padres.id_padre = estudiantes.id_padre where estudiantes.email = %s ',(correo,))
+    user = cursor.fetchall()
+    connection.close()
+    return user
+
+def mensaje_get_maestros(correo):
+    connection = connect_to_db()
+    cursor = connection.cursor()
+    cursor.execute('select maestros.email, maestros.materia from "rendimiento escolar".maestros left join "rendimiento escolar".notas on maestros.email = notas.email_maestro where notas.email_estudiante = %s ',(correo,))
+    user = cursor.fetchall()
+    connection.close()
+    return user

@@ -85,7 +85,9 @@ def inicio_sesion():
             if nota[3] not in valor:
                 data["grados"].append({})
                 data["grados"][i][nota[3]] = [{}]
-                data["grados"][i][nota[3]][0]["estudiantes"] = {"nombre":nota[0],"email":nota[1],"materia":nota[2],"nota":nota[4],"feedback":nota[5]}
+                data["grados"][i][nota[3]][0]["estudiantes"] = {
+                    "nombre":nota[0],"email":nota[1],"materia":nota[2],"nota":nota[4],"feedback":nota[5]
+                    }
                 valor.append(nota[3])
                 i+=1
             
@@ -93,13 +95,17 @@ def inicio_sesion():
                 index = valor.index(nota[3])
                 data["grados"].append({})
                 data["grados"][index][nota[3]] = [{}]
-                data["grados"][index][nota[3]][0]["estudiantes"] = {"nombre":nota[0],"email":nota[1],"materia":nota[2],"nota":nota[4],"feedback":nota[5]}          
+                data["grados"][index][nota[3]][0]["estudiantes"] = {
+                    "nombre":nota[0],"email":nota[1],"materia":nota[2],"nota":nota[4],"feedback":nota[5]
+                    }          
     
         return data
 
     else:
         return {"error": "Credenciales incorrectas"}
     
+
+@cross_origin(allow_headers=['Content-Type']) 
 @main.route("/subir_notas",methods=["post"])
 def subir_notas():
     maestro = request.form.get("maestro")
@@ -110,4 +116,59 @@ def subir_notas():
     return "notas actualizadas"
     
 
-    
+@cross_origin(allow_headers=['Content-Type']) 
+@main.route("/eventos")
+def eventos():
+    data = db.get_eventos()
+    return jsonify(data)
+
+@cross_origin(allow_headers=['Content-Type']) 
+@main.route("/ver_mensajes_recibidos")
+def ver_mensaje():
+    correo = request.form.get("email")
+    info = db.get_mensajes_recibidos(correo)
+    data = []
+    for i in info:      
+        data.append({"remitente":i[0],"receptor":i[1],"mensaje":i[2]})
+
+    return data
+
+
+@cross_origin(allow_headers=['Content-Type'])
+@main.route("/ver_mensajes_enviados")
+def ver_mensajes_enviados():
+    correo = request.form.get("email")
+    info = db.get_mensajes_enviados(correo)
+    data = []
+    for i in info:      
+        data.append({"remitente":i[0],"receptor":i[1],"mensaje":i[2]})
+
+    return data
+
+@cross_origin(allow_headers=['Content-Type']) 
+@main.route("/maestros_enviar_mensaje",methods=["post"])
+def maestros_enviar_mensaje():
+    remitente = request.form.get("email")
+    estudiante = request.form.get("email_estudiante")
+    receptor = db.mensaje_get_padres(estudiante)
+    mensaje = request.form.get("mensaje")
+    db.enviar_mensaje(receptor,mensaje,remitente)
+    return "mensaje enviado"
+
+
+@cross_origin(allow_headers=['Content-Type']) 
+@main.route("/padres_elegir_maestro",methods=["post"])
+def padres_elegir_maestro():
+    estudiante = request.form.get("email_estudiante")
+    data = db.mensaje_get_padres(estudiante)
+    return jsonify(data)
+
+
+@cross_origin(allow_headers=['Content-Type']) 
+@main.route("/padres_enviar_mensaje",methods=["post"])
+def padres_enviar_mensaje():
+    remitente = request.form.get("email")
+    receptor = request.form.get("email_receptor")
+    mensaje = request.form.get("mensaje")
+    db.enviar_mensaje(receptor,mensaje,remitente)
+    return "mensaje enviado"
