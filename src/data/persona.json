@@ -1,0 +1,136 @@
+[
+  {
+    "email": "mateoalvarez@gmail.com",
+    "password": "123456789",
+    "rol": "estudiante",
+    "nombre": "Mateo",
+    "apellido": "Alvarez Rapetti",
+    "asistencia": "92%",
+    "padre": {
+      "nombre": "Juan Carlos",
+      "apellido": "Alvarez",
+      "email": "juanc@gmail.com"
+    },
+    "grado": "1",
+    "seccion": "A",
+    "materias": [
+      {
+        "nombre": "matematica",
+        "profesor": "Rogelio",
+        "trimestres": [
+          {
+            "trimestre": "1° trimestre",
+            "notas": [10, 8, 6]
+          },
+          {
+            "trimestre": "2° trimestre",
+            "notas": [8, 5, 7]
+          },
+          {
+            "trimestre": "3° trimestre",
+            "notas": [10, 9, 8]
+          }
+        ]
+      },
+      {
+        "nombre": "literatura",
+        "profesor": "Ana",
+        "trimestres": [
+          { "trimestre": "1° trimestre", "notas": [8, 3, 2] },
+          {
+            "trimestre": "2° trimestre",
+            "notas": [5, 10, 10]
+          },
+          {
+            "trimestre": "3° trimestre",
+            "notas": [10, 10, 10]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "email": "rogelioL@gmail.com",
+    "password": "123456789",
+    "rol": "docente",
+    "nombre": "Rogelio",
+    "apellido": "Lopez",
+    "curso": "matematica",
+    "grados": [
+      {
+        "nombre": "Mateo",
+        "apellido": "Alvarez Rapetti"
+      }
+    ]
+  },
+  {
+    "email": "anaLu@gmail.com",
+    "password": "123456789",
+    "rol": "docente",
+    "nombre": "Ana",
+    "apellido": "Andreti",
+    "curso": "literatura",
+    "grados": [
+      {
+        "nombre": "Mateo",
+        "apellido": "Alvarez Rapetti"
+      },
+      {
+        "nombre": "Veronica",
+        "apellido": "Alvarez Rapetti"
+      }
+    ]
+  },
+  {
+    "email": "vero@gmail.com",
+    "password": "123456789",
+    "rol": "estudiante",
+    "nombre": "Veronica",
+    "apellido": "Alvarez Rapetti",
+    "asistencia": "95%",
+    "padre": {
+      "nombre": "Juan Carlos",
+      "apellido": "Alvarez",
+      "email": "juanc@gmail.com"
+    },
+    "grado": "2",
+    "seccion": "A",
+    "materias": [
+      {
+        "nombre": "literatura",
+        "propesor": "Ana",
+        "trimestres": [
+          {
+            "trimestre": "1° trimestre",
+            "notas": [5, 8, 10]
+          },
+          {
+            "trimestre": "2° trimestre",
+            "notas": [8, 6, 5]
+          },
+          {
+            "trimestre": "3° trimestre",
+            "notas": [10, 10, 10]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "email": "juanC@gmail.com",
+    "password": "123456789",
+    "rol": "padre",
+    "nombre": "Juan carlos",
+    "apellido": "Alvarez",
+    "hijos": [
+      {
+        "nombre": "Mateo",
+        "apellido": "Alvarez Rapetti"
+      },
+      {
+        "nombre": "Veronica",
+        "apellido": "Alvarez Rapetti"
+      }
+    ]
+  }
+]

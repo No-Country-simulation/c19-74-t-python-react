@@ -1,13 +1,35 @@
 //TABLET
-@media (max-width:768px) {
-    .principal {
-        background-color: violet;
+@media (width> 768px) {
+  .container_app {
+    // border: medium solid blue;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr;
+    grid-template-rows: 65px 2fr 0.5fr;
+  }
+  .principal {
+    grid-column: 2/-1;
+    grid-row: 1/4;
+  }
+  .principal__contenedorLogin {
+    width: 100%;
+
+    // height: 100%;
+    margin: 2rem 0 0 0;
+    .contenedorLogin__logo {
+      left: 38%;
+      // padding: 0 0 1rem 0;
+      top: 10px;
     }
+    .contenedorLogin__formulario {
+      width: 70%;
+      .contenedorLogin__boton {
+        width: 10%;
+      }
+    }
+  }
 }
 
 //MOBILE L
-@media (max-width:425px) {
-    .principal {
-        background-color: red;
-    }
+@media (max-width: 372px) {
 }

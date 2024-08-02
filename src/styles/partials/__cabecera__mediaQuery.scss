@@ -1,13 +1,11 @@
 //TABLET
-@media (max-width:768px) {
-    .cabecera {
-        background-color: red;
-    }
+@media (max-width: 768px) {
 }
 
 //MOBILE L
-@media (max-width:425px) {
-    .cabecera {
-        background-color: blue;
-    }
+@media (max-width: 522px) {
+  // .cabecera {
+  //     justify-content: center;
+  //     display: none;
+  // }
 }

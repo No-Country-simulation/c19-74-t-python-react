@@ -1,0 +1,100 @@
+.mensaje_cabecera {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container_mensaje {
+  width: 300px;
+  height: 81px;
+  background-color: #f1eeee;
+  border-radius: 7px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.container_description {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 0.5rem;
+}
+.container_nombre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.numero_notificacion {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+.none {
+  text-decoration: none;
+}
+//* nuevo mensaje
+.container_inputs {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // border: thin solid red;
+  align-items: center;
+}
+.mensaje_input {
+  width: 300px;
+  height: auto;
+  background-color: $colorDetallesOscuro;
+  border: thin solid white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // gap: 5px;
+
+  // padding: 10px 0;
+}
+
+.mensaje_input input {
+  background-color: $colorDetallesOscuro;
+  border: none;
+  height: 50px;
+  width: 80%;
+  color: white;
+  font-size: 18px;
+}
+.mensaje_input input::placeholder {
+  color: white;
+  font-size: 16px;
+}
+.icono {
+  cursor: pointer;
+}
+@media (width> 768px) {
+  .mensaje_cabecera {
+    // border: thin solid orange;
+    justify-content: start;
+    gap: 10px;
+  }
+  .contendor_mensajes {
+    width: 100%;
+    height: 100%;
+    // border: thin solid lightsalmon;
+  }
+  .container_mensaje {
+    width: 100%;
+  }
+  .mensaje_input {
+    width: 80%;
+    justify-content: center;
+  }
+}

@@ -1,15 +1,37 @@
-.cabecera{
-    background-color: violet;
-    height: 40px;
-    border-bottom: 1px solid white;
-    display: flex;
-    justify-content: space-evenly;
+.cabecera {
+  background-color: $colorDeBase;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .cabecera__logo {
+    height: 50px;
+    padding: 3px;
+    margin: 0 25px;
+  }
 
-    .cabecera__logo{
+  .cabecera__nav {
+    .nav__listado {
+      display: flex;
+      flex-direction: row;
+      margin: 0 30px;
 
+      .listado__items {
+        display: flex;
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+      }
     }
+  }
+}
 
-    .cabecera__nav{
-
-    }
+@media (width>768px) {
+  .cabecera {
+    grid-area: "cabecera";
+    background: #f1eeee;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }

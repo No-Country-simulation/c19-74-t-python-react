@@ -1,0 +1,19 @@
+[
+  {
+    "email": "juanC@gmail.com",
+    "password": "123456789",
+    "rol": "padre",
+    "nombre": "Juan carlos",
+    "apellido": "Alvarez",
+    "hijos": [
+      {
+        "nombre": "Mateo",
+        "apellido": "Alvarez Rapetti"
+      },
+      {
+        "nombre": "Veronica",
+        "apellido": "Alvarez Rapetti"
+      }
+    ]
+  }
+]

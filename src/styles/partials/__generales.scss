@@ -1,6 +1,41 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+.titulo {
+    font-size: 26px;
+}
+
+.pantallaDeCarga {
+    height: 100vh;
+    background: linear-gradient(180deg, #1A9891 55%, #BFFFFB 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pantallaDeCarga__logoBienvenida {
+        color: white;
+        width: 300px;
+
+        @media (max-width:372px) {
+            width: 150px;
+        }
+    }
+}
+
+.direccion__home{
+    margin-top: 40px;
+    width: 150px;
+}
+
+.visible{
+    display: flex !important;
 }

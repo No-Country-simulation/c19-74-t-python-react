@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+@import "./partials/__variables.scss";
 @import "./partials/__generales.scss";
 
 @import "./partials/__cabecera.scss";
@@ -6,3 +9,8 @@
 @import "./partials/__cabecera__mediaQuery.scss";
 @import "./partials/__principal__mediaQuery.scss";
 @import "./partials/__footer__mediaQuery.scss";
+
+@import "./partials/_navBar";
+@import "./partials/_estilos__listas";
+@import "./partials/_perfil__students";
+@import "./partials/_mensajes";

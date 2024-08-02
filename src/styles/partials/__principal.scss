@@ -1,4 +1,111 @@
-.principal{
-    min-height: 650px;
-    background-color: blue;
+.container_app {
+  // border: medium solid salmon;
+}
+
+.principal {
+  min-height: 100vh;
+  width: auto;
+  // min-height: 650px;
+  background-color: $colorDeBase;
+  color: $colorDetalles;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  padding: 3rem 2rem;
+  // border: medium solid red;
+  --speed: 500ms;
+}
+.principal__mensajeError {
+  margin-top: 30px;
+  padding: 10px;
+  text-decoration: none;
+  // border: thin solid blue;
+}
+
+.principal__persona {
+  background-color: $colorDetallesOscuro;
+  height: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .persona__datos {
+    border: thin solid black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    align-items: center;
+
+    .datos__imagenAlumno {
+      height: 40px;
+    }
+
+    .datos__contenedorAlumno {
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+
+      .contenedorAlumno__nombre {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.principal__contenedorLogin {
+  background-color: $colorDeBase;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // margin-top: 5px;
+
+  // top: 6px;
+  .contenedorLogin__logo {
+    position: absolute;
+    width: 300px;
+    padding: 0 10px;
+    top: 4rem;
+    left: 3rem;
+  }
+
+  .contenedorLogin__texto {
+    margin-top: 10px;
+    padding: 10px;
+    text-shadow: 1px 1px 10px white;
+    size: 22px;
+  }
+
+  .contenedorLogin__formulario {
+    .contenedorLogin__input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 100px;
+      border: 2px solid $colorDetalles;
+      text-align: left;
+    }
+
+    .contenedorLogin__boton {
+      padding: 10px;
+      margin: 20px 0 20px;
+      border-radius: 100px;
+      border: 2px solid $colorDetallesOscuro;
+      background-color: $colorDetalles;
+      color: $colorDeBase;
+      width: 90%;
+      cursor: pointer;
+    }
+
+    .contenedorLogin__error {
+      margin-top: 20px;
+      text-shadow: 1px 1px 10px white;
+      color: $textoError;
+    }
+  }
 }
